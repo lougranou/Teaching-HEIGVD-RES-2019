@@ -1,0 +1,41 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\title{Commandes git usuelles}
+\author{Legrand Bruno}
+\date{An de grâce 2019}
+
+\begin{document}
+\maketitle
+
+\part{Workflow git}
+\chapter{Préparation d'une nouvelle branche}
+\section{Revenir à la branche master}
+git checkout master
+
+\section{faire retourner un fichier dans l'état du dernier commit}
+git fetch upstream
+
+\section{Appliquer les modifications de upstream à sa branche}
+git pull upstream master
+
+\section{Créer \& Changer de branche}
+git checkout -b \og NOM\_DE\_LA\_BRANCHE \fg
+
+
+\chapter{Code finalisé}
+\paragraph{Une fois que le code a été testé et est près nous pouvons le push sur origin}
+
+\section{ajouter le code au prochain commit}
+git add \og . /src monfichier \fg
+
+\section{Envoyer le commit avec un message}
+git commit -m "MON\_MESSAGE"
+
+\section{push le commit de la branch sur le repo origin github}
+git push origin <NOM\_DE\_LA\_BRANCHE>
+
+
+\end{document}
