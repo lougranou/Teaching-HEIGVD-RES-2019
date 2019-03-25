@@ -10,12 +10,25 @@ This is where you will find lecture notes, slides and some of the examples prese
 * Be ready for a challenging week
 * Understand and be able to explain the following concepts:
   * What is Docker? How are containers different from virtual machines?
+
+
   * What is the difference between the Docker CLI and the Docker engine? Why can we say that Docker is based on a client-server architecture?
+    *       Docker Client : This is the utility we use when we run any docker commands         e.g. docker run (docker container run) , docker images , docker ps etc. It         allows us to run these commands which a human can easily understand.
+    *     Docker Daemon/Engine: This is the part which does rest of the magic and            knows how to talk to the kernel, makes the system calls to create, operate         and manage containers, which we as users of docker dont have to worry about.
+    
   * What is the difference between a Docker image and a Docker container?
+      *     Image are models to create the shape of a docker
+      *     Docker is the instance create thank to the image
   * How does one create a Docker image? How does one create a Docker  container?
+      *     We have to build our own image with a Dockerfile with `docker run`
+      *     Once we have the image we can create an instance of the image with `docker run`
   * What is Dockerhub?
-  * Be able to explain what happens when you type `docker run -it —rm alpine /bin/sh`. Be able to explain the meaning of every argument in this command.
+      *      Docker Hub is a big library containings a lot of images private or publi
+  * Be able to explain what happens when you type `docker run -it —rm alpine /bin/sh`. 
+      *      i for interacitve, t for terminal, -rm is non-sens, run an instance of the image alpine, a lightweight linux
+  * Be able to explain the meaning of every argument in this command.
   * Be able to explain how port mapping works in Docker. Be able to explain how to use the `-p xx:yy`parameter when using `docker run`.
+      *     -p  Publish a container's port, or range of ports, to the host. <host_port>:<docker_port>
 * Have been able to run the [demo 1](https://github.com/SoftEng-HEIGVD/Teaching-Docker-SimpleJavaServer) on one's laptop during the week.
 * Be able to perform the following operations
   * Write a Dockerfile to define an image that contains a TCP server written in Java

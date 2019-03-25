@@ -107,6 +107,4 @@ public class PresenceClient {
 			LOG.log(Level.SEVERE, ex.getMessage(), ex);
 		}
 	}
-
-
 }

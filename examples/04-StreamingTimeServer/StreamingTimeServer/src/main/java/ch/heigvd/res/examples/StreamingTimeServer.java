@@ -29,7 +29,7 @@ public class StreamingTimeServer {
 
   private final int TEST_DURATION = 15000;
   private final int PAUSE_DURATION = 1000;
-  private final int NUMBER_OF_ITERATIONS = TEST_DURATION / PAUSE_DURATION;
+  private final int NUMBER_OF_ITERATIONS = 1 ;//TEST_DURATION / PAUSE_DURATION;
   private final int LISTEN_PORT = 2205;
 
   /**
@@ -66,6 +66,12 @@ public class StreamingTimeServer {
           LOG.log(Level.INFO, "Sent data to client, doing a pause...");
           Thread.sleep(PAUSE_DURATION);
         }
+
+        while( reader.read() ){
+
+        }
+
+        System.out.println("client dit : " + (char)reader.read());
 
         reader.close();
         writer.close();

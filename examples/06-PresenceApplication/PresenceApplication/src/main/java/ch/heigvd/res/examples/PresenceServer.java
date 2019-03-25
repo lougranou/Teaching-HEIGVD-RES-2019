@@ -207,7 +207,5 @@ public class PresenceServer implements Runnable {
 			connected = false;
 			cleanup();
 		}
-
 	}
-
 }
